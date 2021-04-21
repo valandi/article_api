@@ -19,7 +19,7 @@ routes(app);
 
 app.get(
     '/', 
-    (req, res) => response.send(`Server running on port ${PORT}`)
+    (req, res) => res.send(`Server running on port ${PORT}`)
 )
 
 app.listen(
