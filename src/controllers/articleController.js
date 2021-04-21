@@ -1,8 +1,6 @@
 import mongoose from 'mongoose';
 import { ArticleSchema } from '../models/articleModel'
 
-// TODO: input validation on JSON, update article, delete article
-
 const Article = mongoose.model('Articles', ArticleSchema);
 
 /**
