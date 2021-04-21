@@ -1,6 +1,7 @@
 import express from 'express';
 import routes from './src/routes/articleRoutes.js'
 import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
 
 const app = express();
 
@@ -9,8 +10,11 @@ const PORT = 2814;
 mongoose.Promise = global.Promise;
 mongoose.connect(
     'mongodb://localhost/articledb', 
-    {useNewUrlParser: true}
+    {useNewUrlParser: true,  useUnifiedTopology: true}
 );
+
+app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.json());
 
 routes(app);
 

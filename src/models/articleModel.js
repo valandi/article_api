@@ -5,7 +5,7 @@ export const ArticleSchema = new mongoose.Schema({
     // Primary Key
     id: {
       type: String,
-      required: "Enter unique id"
+      required: "ID is required"
     },
   
     slug: {
