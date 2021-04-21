@@ -4,7 +4,6 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 
 const app = express();
-
 const PORT = 2814;
 
 mongoose.Promise = global.Promise;
@@ -20,7 +19,7 @@ routes(app);
 
 app.get(
     '/', 
-    (request, response) => response.send(`Server running on port ${PORT}`)
+    (req, res) => response.send(`Server running on port ${PORT}`)
 )
 
 app.listen(

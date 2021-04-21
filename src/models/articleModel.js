@@ -13,7 +13,8 @@ export const ArticleSchema = new mongoose.Schema({
     },
   
     title: {
-      type:String
+      type:String,
+      required: "An article must have a title"
     },
   
     dek: {
