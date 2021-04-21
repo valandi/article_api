@@ -49,6 +49,7 @@ export const addArticle = async (req, res) => {
     const articleExists = await Article.exists({id: newArticle.id});
 
     if (articleExists) {
+        newArticle.canonical_url = get_url(newArticle);
         Article.findOneAndUpdate(
             {id: newArticle.id},
             req.body,
